@@ -78,7 +78,7 @@ export default function Weather() {
      
        <p class="closureSentence">
     This project was coded by <a href=""> Yana Yaman </a> and is
-    <a href="https://github.com/YanaJS/my_project"> Open-sourced on GitHub </a>
+    <a href="https://github.com/YanaJS/React-Weather-App"> Open-sourced on GitHub </a>
     and
      <a href="https://main--warm-sprite-d8fed5.netlify.app" target="_blank"
       > hosted on Netlify</a
