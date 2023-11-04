@@ -1,0 +1,155 @@
+.App {
+  margin: 18px;
+}
+
+.Weather {
+  background-color: blanchedalmond;
+  border-radius: 22px;
+  border: 1px solid #dadde1;
+  padding: 14px;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.Weather .h1 {
+  text-align: center;
+  color: antiquewhite;
+}
+
+.Weather .date,
+.time {
+  position: relative;
+  font-size: 20px;
+  list-style: none;
+  font-style: normal;
+  margin: 6px 0 0 18px;
+  padding: 0px;
+  line-height: 23px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bolder;
+  color: rgba(39, 33, 66, 0.4);
+}
+.Weather .time {
+  margin-top: 18px;
+}
+
+.Weather .search {
+  text-align: center;
+  margin-top: 12px;
+  padding: 0;
+  border: none;
+}
+
+.Weather .current-city-weather {
+  text-align: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Weather .city {
+  height: 50;
+  background: #f5f4f8;
+  border: none;
+  border-radius: 6.5px;
+  color: rgba(39, 33, 66, 0.4);
+  display: block;
+  margin: 0 auto;
+  border: none;
+  padding: 6px;
+}
+.Weather .btn-primary {
+  border: none;
+  padding: 6px;
+  padding-right: 12px;
+  border-radius: 6.5px;
+  margin-top: -59px;
+  margin-right: 19px;
+}
+
+.Weather .btn-success {
+  border: none;
+  padding: 6px;
+  padding-right: 12px;
+  border-radius: 6.5px;
+  margin-right: -500px;
+  margin-top: -59px;
+}
+
+.Weather .parameters {
+  display: inline-block;
+  margin: 0 30px;
+  list-style: none;
+  margin-right: 45px;
+  padding-top: 5px;
+  font-size: 17px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-style: italic;
+  color: rgba(7, 7, 7, 0.4);
+  line-height: 2;
+}
+.Weather .daily-weather-forecast {
+  text-align: center;
+}
+
+.Weather .weather-icon {
+  width: 120px;
+  margin-top: -20px;
+}
+
+.Weather .city-name-area {
+  font-size: 42px;
+  font-weight: bold;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.Weather.a {
+  text-align: center;
+  text-decoration: none;
+}
+
+.Weather.cloudy {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 0;
+  color: rgba(39, 33, 66, 0.4);
+}
+.Weather.temp {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.Weather .temp strong {
+  color: #2b2525;
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 1;
+  margin-left: -13px;
+}
+
+.Weather .temp .units {
+  font-size: 18px;
+  position: relative;
+  top: -26px;
+  margin-left: -4px;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.Weather .capitalize {
+  text-transform: capitalize;
+}
+
+.Weather.closureSentence {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-left: 280px;
+}
+
+.Weather.daily-forecast {
+  text-align: center;
+}
