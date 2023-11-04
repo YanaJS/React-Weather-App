@@ -1,6 +1,5 @@
 import React from "react";
 import "./Weather.css";
-import axios from "axios";
 
 export default function Weather() {
   let weatherData = {
@@ -78,11 +77,11 @@ export default function Weather() {
     </div>
      
        <p class="closureSentence">
-    This project was coded by<a href=""> Yana Yaman</a> and is
-    <a href="https://github.com/YanaJS/my_project">Open-sourced on GitHub</a>
+    This project was coded by <a href=""> Yana Yaman </a> and is
+    <a href="https://github.com/YanaJS/my_project"> Open-sourced on GitHub </a>
     and
-    <a href="https://main--warm-sprite-d8fed5.netlify.app" target="_blank"
-      >hosted on Netlify</a
+     <a href="https://main--warm-sprite-d8fed5.netlify.app" target="_blank"
+      > hosted on Netlify</a
     >
   </p>
   </div>
