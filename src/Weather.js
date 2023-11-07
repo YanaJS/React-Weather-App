@@ -24,23 +24,22 @@ export default function Weather() {
       <form className="search">
         <input
           type="text"
-          placeholder="City..."
+          placeholder="Enter a city..."
           className="city shadow-sm"
-          autofocus="on"
-          autocomplete="off"
+          autoFocus="on"
+          autoComplete="off"
         />
         <input
           type="submit"
           value="🔍Search"
           className="searching btn btn-primary shadow-sm"
         />
-        <button
+        <input
+        type="submit"
+        value="📍Current"
           className="current btn btn-success shadow-sm"
-          id="current-location"
-        >
-          📍Current
-        </button>
-      </form>
+          />
+        </form>
       <div className="row">
         <div className="col-6">
           <ul className="current-city-weather">
@@ -54,7 +53,7 @@ export default function Weather() {
                   className="weather-icon"
                 />
               </span>
-              <strong>{weatherData.temperature}</strong>
+              <span className = "temp-in-units">{weatherData.temperature}</span>
               <span className="units">
                 <a href="/">°C </a>
                 {""}|{""} <a href="/">°F</a>
@@ -76,11 +75,11 @@ export default function Weather() {
       </div>
     </div>
      
-       <p class="closureSentence">
+       <footer class="closureSentence">
     This project was coded by Yana Yaman and{""} is
     <a href="https://github.com/YanaJS/React-Weather-App"> Open-sourced on GitHub </a>
     and hosted on <a href="https://www.netlify.com"> Netlify</a>
-  </p>
+  </footer>
   </div>
   );
 }
