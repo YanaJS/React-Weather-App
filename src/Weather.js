@@ -1,19 +1,36 @@
-import React from "react";
+import React, {useState} from "react";
+import axios from "axios";
+
 import "./Weather.css";
 
 export default function Weather() {
-  let weatherData = {
-    city: "Tokyo",
-    description: "Broken Clouds",
-    date: "October 11, 2023",
-    time: "Wednesday 12:27",
-    temperature: "11",
-    imgUrl: "https://openweathermap.org/img/wn/04n@2x.png",
-    sunrise: "06:22",
-    sunset: "19:55",
-    wind: "6",
-    humidity: "61",
-  };
+  //const[ready, setReady] = useState(false);
+  const [weatherData, setWeatherData] = useState({ready:false});
+
+
+  function handleResponse(response){
+    console.log(response.data);
+    setWeatherData({
+      ready: true,
+      temperature:response.data.main.temp,
+      wind:response.data.wind.speed,
+      city: response.data.name,
+      humidity: response.data.main.humidity,
+      description: response.data.weather[0].description,
+      iconUrl:"https://ssl.gstatic.com/onebox/weather/64/sunny.png",
+      date: "November 7, 2023",
+     
+      
+
+    });
+  }
+  
+  
+  
+
+
+
+  if (weatherData.ready){
   return (
     <div>
     <div className="Weather">
@@ -48,15 +65,15 @@ export default function Weather() {
             <li className="temp">
               <span>
                 <img
-                  src={weatherData.imgUrl}
+                  src={weatherData.iconUrl}
                   alt="Cloudy"
                   className="weather-icon"
                 />
               </span>
-              <span className = "temp-in-units">{weatherData.temperature}</span>
+              <span className = "temp-in-units">{Math.round(weatherData.temperature)}</span>
               <span className="units">
-                <a href="/">°C </a>
-                {""}|{""} <a href="/">°F</a>
+                <a href="/">  °C </a>
+                {""}|{""} <a href="/"> °F</a>
               </span>
             </li>
           </ul>
@@ -82,4 +99,14 @@ export default function Weather() {
   </footer>
   </div>
   );
+
+}else{
+  const apiKey = "8c48afa47a9a9c24f3500c7039d50aaa";
+  let city = "Tokyo";
+  let units = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(handleResponse);
+  return "Loading...";
+
+}
 }
