@@ -22,18 +22,17 @@
   font-size: 20px;
   list-style: none;
   font-style: normal;
-  margin: 6px 0 0 18px;
-  padding: 0px;
+  padding: 2px;
   line-height: 23px;
   font-family: "Courier New", Courier, monospace;
   font-weight: bolder;
   color: rgba(39, 33, 66, 0.4);
-}
-.Weather .time {
-  margin-top: 18px;
+  margin-left: 12px;
+  margin-top: 17 px;
 }
 
-.Weather search {
+
+.Weather .search {
   text-align: center;
   margin-top: 12px;
   padding: 0;
@@ -98,15 +97,12 @@
   margin-top: -24px;
 }
 
-.Weather city-name-area {
+.Weather .city-name-area {
   font-size: 42px;
   font-weight: bold;
   padding: 0;
-  margin-top: 20px;
+  margin-top: -20px;
 }
-
-
-
 
 .Weather .cloudy {
   font-size: 20px;
@@ -119,7 +115,7 @@
   font-weight: bold;
 }
 
-.Weather  .temp-in-units {
+.Weather .temp-in-units {
     color: #2b2525;
     font-size: 60px;
     font-weight: bold;
@@ -133,14 +129,10 @@
   position: relative;
   font-weight: bold;
   top: -26px;
-  margin-left: 0;
+  margin-left: 2px;
   line-height: 1;
   font-weight: 500;
 }
-
-
-
-
 
 .Weather .capitalize {
   text-transform: capitalize;

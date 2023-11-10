@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
+import FormattedTime from "./FormattedTime";
 
 import "./Weather.css";
 
@@ -18,7 +20,8 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
       iconUrl:"https://ssl.gstatic.com/onebox/weather/64/sunny.png",
-      date: "November 7, 2023",
+      date: new Date (response.data.dt * 1000),
+      time: "Tuesday 12:58",
      
       
 
@@ -35,8 +38,8 @@ export default function Weather(props) {
     <div>
     <div className="Weather">
       <ul>
-        <li className="date">{weatherData.date}</li>
-        <li className="date">{weatherData.time}</li>
+        <li className="date"><FormattedDate date = {weatherData.date}/></li>
+        <li className="time"><FormattedTime date = {weatherData.date}/></li>
       </ul>
       <form className="search">
         <input
@@ -92,7 +95,7 @@ export default function Weather(props) {
       </div>
     </div>
      
-       <footer class="closureSentence">
+    <footer className="closureSentence">
     This project was coded by Yana Yaman and{""} is
     <a href="https://github.com/YanaJS/React-Weather-App"> Open-sourced on GitHub </a>
     and hosted on <a href="https://www.netlify.com"> Netlify</a>
