@@ -1,6 +1,7 @@
 import React from "react";
 import FormattedSunrise from "./FormattedSunrise";
 import FormattedSunset from "./FormattedSunset";
+import WeatherIcon from "./WeatherIcon";
 
 
 export default function WeatherInfo(props){
@@ -12,13 +13,11 @@ export default function WeatherInfo(props){
                     <li className="city-name-area">{props.data.city}</li>
                     <li className="cloudy capitalize">{props.data.description}</li>
                     <li className="temp">
-              <span>
-                <img
-                  src={props.data.iconUrl}
-                  alt="Cloudy"
-                  className="weather-icon"
+              <div className="weather-icon">
+                <WeatherIcon 
+                code = {props.data.icon} 
                 />
-              </span>
+              </div>
               <span className = "temp-in-units">{Math.round(props.data.temperature)}</span>
               <span className="units">
                 <a href="/">  °C </a>
