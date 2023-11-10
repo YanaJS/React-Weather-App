@@ -93,8 +93,10 @@
 }
 
 .Weather .weather-icon {
-  width: 60px;
-  margin-top: -24px;
+  width: 70px;
+  height: 70px;
+  margin-top: -28px;
+  
 }
 
 .Weather .city-name-area {
@@ -120,7 +122,7 @@
     font-size: 60px;
     font-weight: bold;
     line-height: 1;
-    margin-left: 4px;
+    margin-left: 2px;
 }
 
 
