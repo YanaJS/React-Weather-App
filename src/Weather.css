@@ -93,10 +93,15 @@
 }
 
 .Weather .weather-icon, canvas{
-  margin-right: -16px;
+  margin-right:52px;
   margin-top: 12px;
   display: inline-block;
   
+}
+
+.WeatherTemperature{
+  margin-top: -68px;
+  margin-right: -121px;
 }
 
 .Weather .city-name-area {
