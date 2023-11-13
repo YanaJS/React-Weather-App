@@ -27,6 +27,21 @@ if(loaded){
                     <div className = "col">
                        <WeatherForecastDay forecastData = {forecast[0]}/>
                     </div>
+                    <div className = "col">
+                       <WeatherForecastDay forecastData = {forecast[1]}/>
+                    </div>
+                    <div className = "col">
+                       <WeatherForecastDay forecastData = {forecast[2]}/>
+                    </div>
+                    <div className = "col">
+                       <WeatherForecastDay forecastData = {forecast[3]}/>
+                    </div>
+                    <div className = "col">
+                       <WeatherForecastDay forecastData = {forecast[4]}/>
+                    </div>
+                    <div className = "col">
+                       <WeatherForecastDay forecastData = {forecast[5]}/>
+                    </div>
             </div>
                 
         </div>
@@ -38,10 +53,16 @@ if(loaded){
     let apiKey = "8c48afa47a9a9c24f3500c7039d50aaa";
     let longitude = props.coords.lon;
     let latitude = props.coords.lat;
-   let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+
+   
+    setTimeout(() => { 
+        axios.get(apiUrl).then(handleResponse);
+        console.log("done!");
+        console.log(apiUrl);
+    }, 1500); 
 
 
-    axios.get(apiUrl).then(handleResponse);
     return null;
 
     
