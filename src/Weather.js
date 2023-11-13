@@ -15,9 +15,10 @@ export default function Weather(props) {
 
 
   function handleResponse(response){
-    console.log(response.data);
+   // console.log(response.data);
     setWeatherData({
       ready: true,
+      coord: response.data.coord,
       temperature:response.data.main.temp,
       wind:response.data.wind.speed,
       city: response.data.name,
@@ -79,7 +80,7 @@ export default function Weather(props) {
             />
           </form>
           <WeatherInfo data = {weatherData}/>
-          <DailyWeatherForecast/>
+          <DailyWeatherForecast coords = {weatherData.coord}/>
     
       </div>
         <footer className="closureSentence">
