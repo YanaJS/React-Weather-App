@@ -1,0 +1,23 @@
+.DailyWeatherForecast{
+    text-align: center;
+}
+
+
+.min-temp{
+    opacity: 0.6;
+    margin-left: 5px;
+}
+
+.WeekForecastDay-temp{
+    margin-right: 2px;
+    margin-top: 7px;
+}
+
+
+canvas{
+    margin-right: 10px;
+}
+
+.WeekForecastDay{
+    margin-right: 6px;
+}

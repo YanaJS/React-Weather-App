@@ -3,6 +3,7 @@ import axios from "axios";
 import FormattedDate from "./FormattedDate";
 import FormattedTime from "./FormattedTime";
 import WeatherInfo from "./WeatherInfo";
+import DailyWeatherForecast from "./DailyWeatherForecast";
 
 
 import "./Weather.css";
@@ -78,6 +79,7 @@ export default function Weather(props) {
             />
           </form>
           <WeatherInfo data = {weatherData}/>
+          <DailyWeatherForecast/>
     
       </div>
         <footer className="closureSentence">
