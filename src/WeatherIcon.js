@@ -14,12 +14,12 @@ export default function WeatherIcon(props){
         "04n": "CLOUDY",
         "09d": "RAIN",
         "09n": "RAIN",
-        "10d": "THUNDERSTORM",
-        "10n": "THUNDERSTORM",
+        "10d": "PARTLY_CLOUDY_DAY",
+        "10n": "PARTLY_CLOUDY_NIGHT",
         "11d": "SNOW",
         "11n": "SNOW",
-        "13d": "DRIZZLE",
-        "13n": "DRIZZLE",
+        "13d": "SLEET",
+        "13n": "SLEET",
         "50d": "FOG",
         "50n": "FOG"
         
