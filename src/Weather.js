@@ -85,8 +85,8 @@ export default function Weather(props) {
       </div>
         <footer className="closureSentence">
            This project was coded by Yana Yaman and{""} is
-           <a href="https://github.com/YanaJS/React-Weather-App"> Open-sourced on GitHub </a>
-           and hosted on <a href="https://www.netlify.com"> Netlify</a>
+           <a href="https://github.com/YanaJS/React-Weather-App" target="_blank" rel="noopener noreferrer"> Open-sourced on GitHub </a>
+           and hosted on <a href="https://www.netlify.com" target="_blank" rel="noopener noreferrer"> Netlify</a>
         </footer>
     </div>
   );
