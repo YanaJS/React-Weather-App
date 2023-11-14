@@ -6,6 +6,8 @@ import WeatherInfo from "./WeatherInfo";
 import DailyWeatherForecast from "./DailyWeatherForecast";
 
 
+
+
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -15,7 +17,7 @@ export default function Weather(props) {
 
 
   function handleResponse(response){
-   // console.log(response.data);
+    // console.log(response.data);
     setWeatherData({
       ready: true,
       coords: response.data.coord,
@@ -31,24 +33,42 @@ export default function Weather(props) {
       sunset: response.data.sys.sunset
     });
   }
+
   
   function searchCity(){
     const apiKey = "8c48afa47a9a9c24f3500c7039d50aaa";
     let units = "metric";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(handleResponse);
-
   }
 
-
+  function getWeatherByCurrentLocation(longitude, latitude){
+   let apiKey = "8c48afa47a9a9c24f3500c7039d50aaa";
+   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+   axios.get(apiUrl).then(handleResponse);
+  }
+ 
   function handleSubmit(event){
     event.preventDefault();
-  searchCity();
-    
+    searchCity();
   }
 
   function handleCityChange(event){
     setCity(event.target.value);
+  }
+
+  function getCurrentLocation() {
+    navigator.geolocation.getCurrentPosition(success, error);
+  }
+  
+  function success(position) {
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    getWeatherByCurrentLocation(lon, lat);
+  }
+  
+  function error(err) {
+    alert(`You didn't give permission to use your location.`);
   }
   
   if (weatherData.ready){
@@ -76,7 +96,8 @@ export default function Weather(props) {
             <input
              type="submit"
              value="📍Current"
-             className="current btn btn-success shadow-sm"
+             className="current-location btn btn-success shadow-sm" 
+             onClick={getCurrentLocation}
             />
           </form>
           <WeatherInfo data = {weatherData}/>
